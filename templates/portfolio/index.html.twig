@@ -1,0 +1,102 @@
+
+
+{% block body %}
+
+<head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Léo_bouvard{% endblock %}</title>
+        <link rel="stylesheet" href="https://bootswatch.com/5/lux/bootstrap.min.css">
+        <link rel="stylesheet" href="{{ asset('style.css?1422585377') }}"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.gstatic.com/%22%3E">
+        {# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
+        {% block stylesheets %}
+            {{ encore_entry_link_tags('app') }}
+        {% endblock %}
+
+        {% block javascripts %}
+            {{ encore_entry_script_tags('app') }}
+        {% endblock %}
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="home">L.B</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="home">Accueil
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="portfolio">Portfolio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="cv">CV</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </body>
+
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+<br>
+<div class="head">
+    <p> Bonjour ! </p>
+    <h1>Je suis Léo Bouvard</h1>
+</div>
+<img class="pic_home"  alt="stylesheet" src="{{ asset('moi.jpg') }}"
+width="450"
+height="500"
+/>
+
+<br> <br>
+
+<div class="col d-flex justify-content-center">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+        <h4 class="card-title">Qui suis-je ?</h4>
+        <p class="card-text">Je m'apelle Léo, je suis actuellement étudiant en informatique dans la ville de Roanne.</p>
+    </div>
+    </div>
+</div>
+
+<br> 
+
+<div class="col d-flex justify-content-center">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+        <h4 class="card-title">D'où je viens?</h4>
+        <p class="card-text">Je suis né en France dans la ville de lyon, et je suis également Japonais.</p>
+    </div>
+    </div>
+</div>
+
+<br> 
+
+<div class="col d-flex justify-content-center">
+    <div class="card text-white bg-primary mb-3" style="max-width: 20rem;">
+    <div class="card-body">
+        <h4 class="card-title">Quel est mon objetif ?</h4>
+        <p class="card-text">À la suite de mon BUT Réseaux et Télécommunications, je souhaite aller dans une 
+        école d'ingénieur pour me spécialiser dans la cybersécurité. Pour enfin travailler en tant que consultant en
+        cybersécurité les aider dans ce domaine. </p>
+    </div>
+    </div>
+</div>
+
+{% endblock %}
+
+
+
