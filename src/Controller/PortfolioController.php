@@ -9,6 +9,14 @@ use Symfony\Component\Routing\Annotation\Route;
 class PortfolioController extends AbstractController
 {
     /**
+     * @Route("/", name="root")
+     */
+    public function root(): Response
+    {
+        return $this->render('portfolio/index.html.twig');
+    }
+
+    /**
      * @Route("/home", name="page1")
      */
     public function index(): Response
